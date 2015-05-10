@@ -1,0 +1,24 @@
+extends layout2
+
+block content
+	h2 Nuevo Proyecto
+	form(method='post', action='/admin/new' enctype='multipart/form-data')
+		.form-group
+			label Titulo
+				input.form-control(type='text', name='title')
+		.form-group
+			label Descripcion
+				textarea.form-control(name='description')
+		.form-group
+			label Service
+				input.form-control(type='text', name='service')
+		.form-group
+			label Client
+				input.form-control(type='text', name='client')
+		.form-group
+			label Project Image
+				input.form-control(type='file', name='projectImage')
+		.form-group
+			label Date
+				input.form-control(type='date', name='projectDate')
+		button.btn.btn-default(type='submit') Enviar
